@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dncwt6rahsjhb"]
+
+[ext_resource type="Texture2D" uid="uid://dxp5fuca1e4qt" path="res://assets/texture/alien1_1.png" id="1_4ra3w"]
+[ext_resource type="Script" uid="uid://btf7047m4kp2h" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="Texture2D" uid="uid://ciybybhkkxnbl" path="res://assets/texture/alien1_2.png" id="2_5uy6h"]
+[ext_resource type="Texture2D" uid="uid://c4m346gniemqr" path="res://assets/texture/alien1_3.png" id="3_c4w8v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8tegq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4ra3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5uy6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c4w8v")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ra3w"]
+size = Vector2(21, 33)
+
+[node name="Enemy" type="Area2D" unique_id=1423579904]
+script = ExtResource("1_7p1mj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=876139501]
+sprite_frames = SubResource("SpriteFrames_8tegq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1714310197]
+position = Vector2(1.5, -4.5)
+shape = SubResource("RectangleShape2D_4ra3w")

@@ -1,15 +1,14 @@
 [gd_scene format=3 uid="uid://d3k8df3ble21h"]
 
-[ext_resource type="Texture2D" uid="uid://de528w5md8u31" path="res://assets/texture/background.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://ci0v75vqjopu6" path="res://scenes/bg.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://pd6ds2wwjboc" path="res://scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://b7qiuxqk6ar5i" path="res://scenes/enemy_spawner.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D" unique_id=1397663984]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=606781747]
-offset_right = 672.0
-offset_bottom = 769.0
-texture = ExtResource("1_uwrxv")
-stretch_mode = 1
+[node name="BG" parent="." unique_id=811130175 instance=ExtResource("1_yqjtg")]
 
 [node name="Player" parent="." unique_id=1528906144 instance=ExtResource("2_yqjtg")]
 position = Vector2(334, 711)
+
+[node name="EnemySpawner" parent="." unique_id=472840815 instance=ExtResource("3_lnu2h")]

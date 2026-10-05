@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwckm5tu85yld"
-path="res://.godot/imported/alien3(f1).png-94bcce17ab24e4300b199e7f9f2f64ed.ctex"
+uid="uid://bf12ku4dp2v46"
+path="res://.godot/imported/alien4_1.png-47c56da55df706f22194f84d9d94f212.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/texture/alien3(f1).png"
-dest_files=["res://.godot/imported/alien3(f1).png-94bcce17ab24e4300b199e7f9f2f64ed.ctex"]
+source_file="res://assets/texture/alien4_1.png"
+dest_files=["res://.godot/imported/alien4_1.png-47c56da55df706f22194f84d9d94f212.ctex"]
 
 [params]
 

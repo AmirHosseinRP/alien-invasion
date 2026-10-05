@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ci0v75vqjopu6"]
+
+[ext_resource type="Texture2D" uid="uid://de528w5md8u31" path="res://assets/texture/background.png" id="1_anprf"]
+[ext_resource type="Script" uid="uid://gcg2uopja734" path="res://scripts/bg.gd" id="1_dpp0m"]
+
+[node name="BG" type="Parallax2D" unique_id=811130175]
+script = ExtResource("1_dpp0m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1580575069]
+texture_repeat = 2
+texture = ExtResource("1_anprf")
+centered = false
+region_enabled = true
+region_rect = Rect2(-17, 0, 672, 768)

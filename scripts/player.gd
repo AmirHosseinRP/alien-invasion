@@ -1,18 +1,16 @@
 extends CharacterBody2D
 
-@export var step_size: float = 20.0
-@export var step_interval: float = 0.1
+class_name Player
 
-var step_timer: float = 0.0
+@export var movement_speed: int = 300
 
 
-func _physics_process(delta: float) -> void:
-	step_timer -= delta
+func _physics_process(_delta: float) -> void:
+	velocity = Vector2.ZERO
 
-	if step_timer <= 0.0:
-		if Input.is_action_pressed("move_right"):
-			position.x += step_size
-			step_timer = step_interval
-		elif Input.is_action_pressed("move_left"):
-			position.x -= step_size
-			step_timer = step_interval
+	if Input.is_action_pressed("move_right"):
+		velocity.x = movement_speed
+	if Input.is_action_pressed("move_left"):
+		velocity.x = -movement_speed
+
+	move_and_slide()

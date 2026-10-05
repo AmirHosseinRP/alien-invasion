@@ -1,16 +1,24 @@
 [gd_scene format=3 uid="uid://pd6ds2wwjboc"]
 
-[ext_resource type="Texture2D" uid="uid://bcujs0iqnggek" path="res://assets/texture/rocket_1.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://waovu37u2r7q" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://ip00pcsp8j61" path="res://assets/texture/rocket_2.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://bgt2386fyljn0" path="res://assets/texture/rocket_3.png" id="4_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://caypfcb1fugel" path="res://assets/texture/rocket_4.png" id="5_fjrip"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_blt1j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_3vyb7")
+"texture": ExtResource("3_qlg0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tuyoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fjrip")
 }],
 "loop": 1,
-"name": &"player",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -27,7 +35,8 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=259677268]
 sprite_frames = SubResource("SpriteFrames_blt1j")
-animation = &"player"
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D_1" type="CollisionShape2D" parent="." unique_id=1976495613]
 position = Vector2(0, -1)

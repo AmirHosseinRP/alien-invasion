@@ -1,0 +1,22 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dbaf4sx17hyna"]
+
+[ext_resource type="Texture2D" uid="uid://dolcbk03ig0li" path="res://assets/texture/alien6_1.png" id="1_vj7qe"]
+[ext_resource type="Texture2D" uid="uid://cvuhhnhwhutck" path="res://assets/texture/alien6_2.png" id="2_vstol"]
+[ext_resource type="Texture2D" uid="uid://b2tomxia4wu0q" path="res://assets/texture/alien6_3.png" id="3_ufp68"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vj7qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vstol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ufp68")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
