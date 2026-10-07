@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://d3k8df3ble21h"]
 
+[ext_resource type="Script" uid="uid://k2nsopbrs5t0" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://ci0v75vqjopu6" path="res://scenes/bg.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://pd6ds2wwjboc" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://b7qiuxqk6ar5i" path="res://scenes/enemy_spawner.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D" unique_id=1397663984]
+script = ExtResource("1_lbhrr")
 
 [node name="BG" parent="." unique_id=811130175 instance=ExtResource("1_yqjtg")]
 

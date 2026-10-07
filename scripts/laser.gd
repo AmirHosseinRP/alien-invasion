@@ -1,0 +1,13 @@
+class_name Laser
+
+extends Area2D
+
+@export var speed: int = 200
+
+
+func _physics_process(delta: float) -> void:
+	global_position.y -= speed * delta
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()

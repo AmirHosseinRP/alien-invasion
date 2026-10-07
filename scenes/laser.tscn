@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c6a75tpouc5n4"]
+
+[ext_resource type="Script" uid="uid://6we81ohogive" path="res://scripts/laser.gd" id="1_xmihv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(3, 12)
+
+[node name="Laser" type="Area2D" unique_id=888857418]
+script = ExtResource("1_xmihv")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1469844877]
+position = Vector2(0, -6)
+scale = Vector2(1.5, 3)
+polygon = PackedVector2Array(-1, -2, -1, 2, 1, 2, 1, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257472151]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=872619896]
+rect = Rect2(-1.5, -3, 3, 3)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
